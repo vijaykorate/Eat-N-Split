@@ -77,10 +77,12 @@ export default function App() {
           {showAddFriend ? "Close" : "Add Friend"}
         </Button>
       </div>
+
       {selectedFriend && (
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
@@ -124,7 +126,7 @@ function Friend({ friend, onSelection, selectedFriend }) {
 
       {friend.balance === 0 && (
         <p>
-          You and {friend.name}
+          66 You and {friend.name}
           are even
         </p>
       )}
